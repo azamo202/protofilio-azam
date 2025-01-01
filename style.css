@@ -142,9 +142,9 @@ section {
 
 .card {
     background-color: #fff;
-    width: 15em;
-    height: 10em;
-    box-shadow: 5px 5px rgba(    1, 1, 1, 0.1); 
+    width: 20em;
+    height: 12em;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.1); 
     border-radius: 8px; 
     margin: 30px; 
     transition: transform 0.3s ease;
@@ -187,13 +187,14 @@ section {
 .projects-card {
     background-color: #fff;
     border: 1px solid transparent;
-    min-height: 14em;
-    width: 15em; 
+    width: 20em; 
+    height: 15em;
     overflow: hidden;
     border-radius: 10px;
     margin: 20px;
     transition: 1s ease;
 }
+
 
 .projects-card:hover {
     transform: scale(1.05);
@@ -224,9 +225,9 @@ section {
     margin-top: 10px;
 }
 
-.more-details {
+a {
     text-decoration: none;
-    color: #3e6cf4;
+    color: #3c2eff;
 }
 
 .more-details:hover {
