@@ -1,0 +1,445 @@
+:root{
+    --main-color:#32e7ff;
+    --secondary-color:#2c4755 ; 
+}
+
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "Work Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+@media (min-width: 768px) {
+    .continar {
+        width: 750px;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 992px) {
+    .continar {
+        width: 970px;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 1200px) {
+    .continar {
+        width: 1170px;
+        margin: 0 auto;
+    }
+}
+
+
+@media (max-width: 767px) {
+.special-heading{
+    font-size: 60px;
+}
+.special-heading + p{
+    margin-top: -20;
+}
+}
+
+
+.header {
+    padding: 20px;
+    background-color: #fff; /* لإبراز الهيدر */
+}
+
+.header .continar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .logo {
+    width: 30px;
+}
+
+.header .link {
+    position: relative;
+}
+
+.header .link .icon {
+    width: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px;
+}
+
+.header .link .icon span {
+    background-color: #333;
+    height: 3px;
+    transition: 0.5s;
+}
+
+.header .link .icon span:first-child {
+    width: 100%;
+}
+
+.header .link .icon span:nth-child(2) {
+    width: 50%;
+}
+
+.header .link .icon span:last-child {
+    width: 100%;
+}
+
+.header .link ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    background-color: #f6f6f6;
+    right: 0;
+    min-width: 200px;
+    top: calc(100% + 15px);
+    display: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* لتحسين المظهر */
+    border-radius: 4px; /* زوايا مستديرة */
+    z-index: 1;
+
+}
+
+.header .link ul::before {
+    content: "";
+    position: absolute;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #f6f6f6 transparent;
+    top: -20px;
+    right: 15px;
+}
+
+.header .link:hover ul {
+    display: block;
+
+}
+
+.header .link ul li a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: #333;
+    transition: 0.3s ease;
+}
+
+.header .link ul li a:hover {
+    padding-left: 25px;
+    background-color: #e9e9e9;
+    transition: 0.3s;
+}
+
+.header .link ul li:not(:last-child) a {
+    border-bottom: 1px solid #ddd;
+}
+
+.landing{
+    background-image: url(../img/85838144-black-and-white-mountain-in-switzerland.jpg);
+    background-size: cover;
+    height: calc(100vh - 64px);
+}
+ /*when center any things */
+.landing .intro-text{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    width: 320%;
+    max-width: 100%;
+    transform: translate(-50%, -50%);
+
+}
+.landing .intro-text h1{
+    margin: 0;
+    font-weight: bold;
+    font-size: 50px;
+    color: var(--main-color);
+
+}
+.landing .intro-text P {
+    font-size: 19PX;
+}
+
+.feature{
+    padding:60px;
+    padding-bottom: 60px;
+    background-color: #f6f6f6;
+}
+
+.feature .continar{
+    display: grid;
+    grid-template-columns:repeat(auto-fill, minmax(300px,1fr));
+    grid-gap: 20px;
+}
+
+.feature .continar .feat{
+    padding: 20px;
+    text-align: center;
+}
+
+.feature .continar .feat i{
+    color: var(--main-color);
+    font-size: 60px;
+}
+.feature .continar .feat h3{
+    font-weight: 800;
+    margin: 30px 0px ;
+}
+
+.feature .continar .feat p{
+    line-height: 1.5 ;
+    font-size: 17px;
+    color: #777;
+}
+.special-heading{
+    color: #ebebeb;
+    font-size: 100px;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: -3;
+    margin: 0;
+}
+
+@media(max-width: 767px){
+    .special-heading {
+        font-size: 80px;
+        padding: 0 50px 0 50px;
+}
+}
+
+@media(max-width: 767px){
+    .protofolio .continar .special-heading {
+        font-size: 66px;
+        padding: 0 20px 0 20px;
+}
+}
+.special-heading + p{
+    font-size: 15px;
+    text-align: center;
+    margin: -30px;
+    font-weight: 800;
+    color: #797979;
+}
+.services .services-content{
+    padding: 60px;
+}
+
+.services .services-content{
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns:repeat(auto-fill, minmax(300px,1fr));
+    grid-gap: 30px;
+}
+
+.services .services-content .srv{
+    display: flex;
+    margin-bottom: 40px;
+}
+
+@media(max-width: 767px){
+    .services .services-content .srv{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.services .services-content .srv i{
+    color: var(--main-color);
+    font-size: 50px;
+}
+
+.services .services-content .srv text{
+
+}
+
+.services .services-content .srv .text h3{
+    margin:0 0 20px;
+    padding: 10px;
+ 
+}
+
+.services .services-content .srv .text p{
+    color: #777;
+    font-size: 300;
+    line-height: 1.5;
+}
+
+.services .services-content .image {
+    text-align: center;
+    position: relative;
+}
+
+.services .services-content  .image::before{
+    content: "";
+}
+
+.services .services-content .image img{
+    width: 350px; ;
+}
+
+@media (max-width: 1199px){
+    .image {
+        display: none;
+    }
+}
+
+.protofolio{
+    padding: 30px;
+    background-color: #f6f6f6;
+}
+
+.protofolio .protofolio-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+    grid-gap: 30px;
+    margin-top: 80px;
+}
+
+.protofolio .protofolio-content .card{
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.protofolio .protofolio-content .card img{
+    width: 100%;
+}
+
+.protofolio .protofolio-content .card .info{
+    padding: 20px;
+   
+}
+
+.protofolio .protofolio-content .card .info h3{
+    margin: 0px;
+   
+}
+
+.protofolio .protofolio-content .card .info p{
+    color: #777;
+    line-height: 1.6;
+    margin-bottom: 0px;
+}
+
+.About{
+    padding-top:60px;
+    padding-bottom: calc(60px + 60px);
+}
+
+
+.About .About-content {
+    padding: 50px;
+    display: flex; /* لعرض النص والصورة بجانب بعضهما */
+    align-items: center; /* محاذاة العناصر عموديًا */
+    gap: 20px; /* مسافة بين النص والصورة */
+}
+
+.About .About-content .mage img {
+    max-width: 100%; /* التأكد من أن الصورة لا تتجاوز حجم الحاوية */
+    width: 300px; /* عرض ثابت للصورة */
+    border-radius: 10px; /* لتجميل زوايا الصورة */
+}
+
+.About .About-content .text .pw {
+    font-weight: 800;
+    flex: 1; /* للسماح للنص بأخذ المساحة المتبقية */
+    font-size: 16px; /* تحسين قراءة النص */
+    line-height: 1.6; /* تحسين تباعد الأسطر */
+    text-align: justify; /* لضبط النص من الطرفين */
+}
+
+@media (max-width: 767px) {
+    .About .About-content {
+        flex-direction: column; /* ترتيب العناصر عموديًا للشاشات الصغيرة */
+        text-align: center; /* محاذاة النص في المنتصف */
+    }
+
+    .About .About-content .text {
+        text-align: center; /* محاذاة النص للمنتصف */
+    }
+}
+hr{
+    width: 50%;
+    display: inline-block;
+    border-color: #32e7ff;
+    color: #32e7ff;
+    height: 2px;
+
+}
+
+.About .About-content .text .p2{
+    color: #777;
+}
+
+.contact  {
+    background-color: #f6f6f6;
+}
+
+.contact{
+    padding-top:60px;
+    padding-bottom: 60px;
+    background-color: #f6f6f6;
+}
+
+.contact .info{
+    padding-top:60px;
+    padding-bottom: 60px;
+    text-align: center;
+}
+
+.contact .info .label{
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--secondary-color);
+    letter-spacing: -1px;
+    margin-bottom: 15px;
+}
+
+.contact .info .link{
+    display: block;
+    color: var(--main-color);
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.contact .info .social{
+    margin: 20px;
+    font-size: 22px;
+    justify-content: center;
+    display: block;
+}
+
+ .icons  i {
+    margin:10px;
+    color: var(--secondary-color);
+    font-size: 50px;
+}
+
+.footer{
+   margin-bottom: -100px;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 30px 10px;
+    text-align: center;
+    font-size: 18px;
+    
+}
+
+.footer span{
+    font-weight: bold;
+    color: var(--main-color);
+    margin: 5px;
+}

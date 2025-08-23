@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Roboto:wght@300;400;500;700&display=swap');
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px; /* Base font size for rem units */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem; /* 15px equivalent */
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #f0f0f0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    text-decoration: none;
+    color: #3e6cf4;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+.navigation a {
+    color: #3e6cf4;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding-left: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.navigation a:hover {
+    color: black;
+}
+
+/* Main Section */
+.main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(images/Untitled-2\ -\ Copy.jpg) no-repeat center;
+    background-size: cover;
+    text-align: center;
+    padding: 0 5%;
+}
+
+.main h2 {
+    color: #f0f0f0;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.main h2 span {
+    display: inline-block;
+    margin-top: 10px;
+    color: #3e6cf4;
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.main h3 {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.main_button {
+    color: #fff;
+    background-color: #3e6cf4;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: inline-block;
+    padding: 0.9375em 2.1875em;
+    letter-spacing: 1px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.main_button:hover {
+    background-color: #2e5cbf;
+    transform: scale(1.05);
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 1.7rem;
+    padding-right: 1.5rem;
+}
+
+/* Sections */
+section {
+    padding: 5% 10%;
+}
+
+.title {
+    text-align: center;
+    color: #3e6cf4;
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.card {
+    background-color: #fff;
+    width: 100%;
+    max-width: 20rem;
+    height: auto;
+    padding: 1.5rem;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.icon {
+    color: #3e6cf4;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.info {
+    text-align: center;
+}
+
+.info h3 {
+    color: black;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.info p {
+    font-size: 1rem;
+    color: black;
+}
+
+/* Projects Section */
+.projects {
+    background-color: black;
+    padding: 5% 10%;
+}
+
+.projects-card {
+    background-color: #fff;
+    border: 1px solid transparent;
+    width: 100%;
+    max-width: 20rem;
+    height: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.projects-card:hover {
+    transform: scale(1.05);
+}
+
+.projects-image img {
+    width: 100%;
+    height: auto;
+}
+
+.projects-info {
+    padding: 1rem;
+}
+
+.projects-category {
+    font-size: 0.8rem;
+    color: black;
+}
+
+.projects-title {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-top: 10px;
+}
+
+/* Footer */
+.footer {
+    display: flex; /* عرض العناصر في صف واحد */
+    justify-content: space-between; /* توزيع العناصر بالتساوي */
+    align-items: center; /* محاذاة العناصر عموديًا */
+    padding: 1rem 2rem; /* مسافة داخلية */
+    background-color: black; /* لون الخلفية */
+    color: #fff; /* لون النص */
+    flex-wrap: wrap; /* السماح بتكديس العناصر إذا كانت الشاشة صغيرة */
+}
+
+.footer .footer-title {
+    font-size: 1.2rem; /* حجم النص */
+    font-weight: bold; /* نص عريض */
+}
+
+.footer .social-icons {
+    display: flex; /* عرض الأيقونات بشكل أفقي */
+    gap: 1rem; /* مسافة بين الأيقونات */
+}
+
+.footer .social-icons a {
+    color: #fff;
+    font-size: 1.5rem; /* حجم الأيقونات */
+    transition: color 0.3s ease; /* تأثير عند تمرير الفأرة */
+}
+
+.footer .social-icons a:hover {
+    color: #3e6cf4; /* لون مختلف عند التمرير */
+}
+
+/* استجابة للشاشات الصغيرة */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column; /* ترتيب عمودي */
+        text-align: center; /* توسيط النص */
+    }
+
+    .footer .social-icons {
+        justify-content: center; /* محاذاة الأيقونات إلى الوسط */
+    }
+}
+
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    header {
+        padding: 10px 3%;
+    }
+
+    .navigation a {
+        padding-left: 1rem;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    section {
+        padding: 5% 5%;
+    }
+
+    .main h2 {
+        font-size: 1.2rem;
+    }
+
+    .main h3 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .main h2 {
+        font-size: 1rem;
+    }
+
+    .main h3 {
+        font-size: 1.6rem;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .main h2 {
+        font-size: 0.9rem;
+    }
+
+    .main h3 {
+        font-size: 1.4rem;
+    }
+
+    .navigation a {
+        font-size: 1rem;
+        padding-left: 0.5rem;
+    }
+
+    .footer-title {
+        font-size: 1.4rem;
+    }
+}
