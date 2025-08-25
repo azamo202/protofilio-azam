@@ -9,9 +9,17 @@
     <title>Azam Alsafani | Full Stack</title>
     <link rel="icon" href="images/image.png" type="image/x-icon">
 </head>
-<body>
+<body class="light-mode">
     <!-- شريط التحميل -->
     <div class="loading-bar"></div>
+
+    <!-- أزرار التحكم (اللغة والوضع الليلي) -->
+    <div class="control-buttons">
+        <button id="language-toggle" class="control-btn" title="تبديل اللغة">
+            <i class="fa-solid fa-language"></i>
+            <span class="lang-text">EN</span>
+        </button>
+    </div>
 
     <!-- زر القائمة للموبايل -->
     <div class="menu-toggle">
@@ -23,10 +31,10 @@
     <header>
         <a href="#" class="logo">AZAM</a>
         <nav class="navigation">
-            <a href="#home" class="nav-link">الرئيسية</a>
-            <a href="#services" class="nav-link">خدماتي</a>
-            <a href="#projects" class="nav-link">مشاريعي</a>
-            <a href="#contact" class="nav-link">اتصل بي</a>  
+            <a href="#home" class="nav-link" data-key="home">الرئيسية</a>
+            <a href="#services" class="nav-link" data-key="services">خدماتي</a>
+            <a href="#projects" class="nav-link" data-key="projects">مشاريعي</a>
+            <a href="#contact" class="nav-link" data-key="contact">اتصل بي</a>  
         </nav>
     </header>
     
@@ -34,19 +42,18 @@
     <section class="main" id="home">
         <div class="overlay"></div>
         <div class="content">
-            <h2 class="welcome-text">مرحباً، أنا <span class="name">عزام</span></h2>
-            <h1 class="job-title"><span class="typing-animation">مبرمج Full Stack</span></h1>
-            <p class="intro">أقوم بتحويل أفكارك إلى مواقع ويب رائعة وتطبيقات مذهلة تلبي احتياجاتك وتفوق توقعاتك.</p>
-            <a href="#projects" class="main-button">استعرض أعمالي</a>
+            <h2 class="welcome-text" data-key="welcome">مرحباً، أنا <span class="name">عزام</span></h2>
+            <h1 class="job-title"><span class="typing-animation" data-key="jobTitle">Programer Full Stack</span></h1>
+            <p class="intro" data-key="intro">أقوم بتحويل أفكارك إلى مواقع ويب رائعة وتطبيقات مذهلة تلبي احتياجاتك وتفوق توقعاتك.</p>
+            <a href="#projects" class="main-button" data-key="viewWork">استعرض أعمالي</a>
             <div class="social-icons">
                 <a href="https://www.linkedin.com/in/azam-al-safani-77b0412a5/" target="_blank" class="social-link"><i class="fa-brands fa-linkedin-in"></i></a>
                 <a href="#" target="_blank" class="social-link"><i class="fa-brands fa-facebook"></i></a>
                 <a href="http://wa.me/967781560010" target="_blank" class="social-link"><i class="fa-brands fa-whatsapp"></i></a>
-
             </div>
         </div>
         <div class="scroll-indicator">
-            <span>قم بالتمرير لأسفل</span>
+            <span data-key="scroll">قم بالتمرير لأسفل</span>
             <i class="fas fa-chevron-down"></i>
         </div>
     </section>
@@ -54,28 +61,28 @@
     <!-- قسم الخدمات -->
     <section class="services" id="services">
         <div class="container">
-            <h2 class="section-title">خدماتي</h2>
+            <h2 class="section-title" data-key="servicesTitle">خدماتي</h2>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fa-solid fa-code"></i>
                     </div>
-                    <h3 class="service-title">تطوير المواقع</h3>
-                    <p class="service-description">أقوم بإنشاء مواقع ويب متجاوبة وسريعة باستخدام أحدث التقنيات لضمان تجربة مستخدم متميزة.</p>
+                    <h3 class="service-title" data-key="service1Title">تطوير المواقع</h3>
+                    <p class="service-description" data-key="service1Desc">أقوم بإنشاء مواقع ويب متجاوبة وسريعة باستخدام أحدث التقنيات لضمان تجربة مستخدم متميزة.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fa-solid fa-mobile-screen-button"></i>
                     </div>
-                    <h3 class="service-title">تطبيقات الجوال</h3>
-                    <p class="service-description">تصميم وتطوير تطبيقات جوال مبتكرة وسلسة تعمل على مختلف المنصات والأجهزة.</p>
+                    <h3 class="service-title" data-key="service2Title">تطبيقات الجوال</h3>
+                    <p class="service-description" data-key="service2Desc">تصميم وتطوير تطبيقات جوال مبتكرة وسلسة تعمل على مختلف المنصات والأجهزة.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fa-solid fa-palette"></i>
                     </div>
-                    <h3 class="service-title">تصميم واجهات المستخدم</h3>
-                    <p class="service-description">تصميم واجهات مستخدم جذابة وسهلة الاستخدام تركز على تجربة المستخدم وتحقيق الأهداف.</p>
+                    <h3 class="service-title" data-key="service3Title">تصميم واجهات المستخدم</h3>
+                    <p class="service-description" data-key="service3Desc">تصميم واجهات مستخدم جذابة وسهلة الاستخدام تركز على تجربة المستخدم وتحقيق الأهداف.</p>
                 </div>
             </div>
         </div>
@@ -84,13 +91,13 @@
     <!-- قسم المشاريع -->
     <section class="projects" id="projects">
         <div class="container">
-            <h2 class="section-title">مشاريعي</h2>
+            <h2 class="section-title" data-key="projectsTitle">مشاريعي</h2>
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="images/Screenshot 2025-08-21 073629.png" alt=""/>
+                        <img src="images/Screenshot 2025-08-24 113804.png" alt="متجر إلكتروني"/>
                         <div class="project-overlay">
-                            <a href="https://alnagom.onrender.com" target="_blank" class="project-link">عرض المشروع</a>
+                            <a href="https://alnagom.onrender.com" target="_blank" class="project-link" data-key="viewProject">عرض المشروع</a>
                         </div>
                     </div>
                     <div class="project-info">
@@ -100,9 +107,9 @@
                 </div>
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="images/WhatsApp Image 2025-08-21 at 11.46.22_978ecf09.jpg" alt="مشروع تطبيق جوال"/>
+                        <img src="images/Screenshot 2025-08-24 113143.png" alt="تطبيق بصمة تواجد"/>
                         <div class="project-overlay">
-                            <a href="#" target="_blank" class="project-link">عرض المشروع</a>
+                            <a href="Pdf/تطبيق بصمة تواجد.pdf" target="_blank" class="project-link" data-key="viewProject">عرض المشروع</a>
                         </div>
                     </div>
                     <div class="project-info">
@@ -110,16 +117,28 @@
                         <p class="project-category">تطبيق للتحضير عن طريق الموقع الجغرافي والبصمة عن طريق الهاتف</p>
                     </div>
                 </div>
-                  <div class="project-card">
+                <div class="project-card">
                     <div class="project-image">
-                        <img src="images/Screenshot 2025-08-21 095226.png" alt="لوحة التحكم"/>
+                        <img src="images/Screenshot 2025-08-24 113609.png" alt="لوحة تحكم المتجر"/>
                         <div class="project-overlay">
-                            <a href="https://alnagom.onrender.com/admin" target="_blank" class="project-link">عرض المشروع</a>
+                            <a href="https://alnagom.onrender.com/admin" target="_blank" class="project-link" data-key="viewProject">عرض المشروع</a>
                         </div>
                     </div>
                     <div class="project-info">
                         <h3 class="project-title">لوحة تحكم خاصه للمتجر الالكتروني</h3>
                         <p class="project-category">داش بوورد لإضافة المنتجات والطلبات والرؤية العامة للمتجر</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/Screenshot 2025-08-24 113333.png" alt="لوحة تحكم التطبيق"/>
+                        <div class="project-overlay">
+                            <a href="files/project.pdf" target="_blank" class="project-link" data-key="viewProject">عرض المشروع</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">لوحة تحكم لتطبيق بصمة تواجد</h3>
+                        <p class="project-category">داش بوورد لادارة تطبيق الحضور والانصراف</p>
                     </div>
                 </div>
             </div>
@@ -129,7 +148,7 @@
     <!-- قسم الاتصال -->
     <section class="contact" id="contact">
         <div class="container">
-            <h2 class="section-title">اتصل بي</h2>
+            <h2 class="section-title" data-key="contactTitle">اتصل بي</h2>
             <div class="contact-content">
                 <div class="contact-info">
                     <div class="contact-card">
@@ -137,7 +156,7 @@
                             <i class="fa-solid fa-phone"></i>
                         </div>
                         <div class="contact-details">
-                            <h3>هاتف</h3>
+                            <h3 data-key="phone">هاتف</h3>
                             <p>+967 781560010</p>
                         </div>
                     </div>
@@ -146,7 +165,7 @@
                             <i class="fa-regular fa-envelope"></i>
                         </div>
                         <div class="contact-details">
-                            <h3>بريد إلكتروني</h3>
+                            <h3 data-key="email">بريد إلكتروني</h3>
                             <p>azoz20113040@gmail.com</p>
                         </div>
                     </div>
@@ -155,16 +174,16 @@
                             <i class="fa-solid fa-location-dot"></i>
                         </div>
                         <div class="contact-details">
-                            <h3>موقعي</h3>
+                            <h3 data-key="location">موقعي</h3>
                             <p>اليمن</p>
                         </div>
                     </div>
                 </div>
                 <form class="contact-form">
-                    <input type="text" placeholder="اسمك" required>
-                    <input type="email" placeholder="بريدك الإلكتروني" required>
-                    <textarea placeholder="رسالتك" rows="5" required></textarea>
-                    <button type="submit">إرسال الرسالة</button>
+                    <input type="text" placeholder="اسمك" required data-key="namePlaceholder">
+                    <input type="email" placeholder="بريدك الإلكتروني" required data-key="emailPlaceholder">
+                    <textarea placeholder="رسالتك" rows="5" required data-key="messagePlaceholder"></textarea>
+                    <button type="submit" data-key="sendMessage">إرسال الرسالة</button>
                 </form>
             </div>
         </div>
@@ -172,10 +191,10 @@
 
     <footer class="footer">
         <div class="container">
-            <p class="footer-text">&copy; 2025 جميع الحقوق محفوظة <span>عزام الصفاني</span></p>
+            <p class="footer-text">&copy; 2025 <span data-key="rights">جميع الحقوق محفوظة</span> <span>عزام الصفاني</span></p>
             <div class="social-icons">
                 <a href="https://www.linkedin.com/in/azam-al-safani-77b0412a5/" target="_blank" class="social-link"><i class="fa-brands fa-linkedin-in"></i></a>
-               <a href="http://wa.me/967781560010" target="_blank" class="social-link"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="http://wa.me/967781560010" target="_blank" class="social-link"><i class="fa-brands fa-whatsapp"></i></a>
                 <a href="https://www.facebook.com/profile.php?id=100003387995751" target="_blank" class="social-link"><i class="fa-brands fa-facebook"></i></a>
             </div>  
         </div>
@@ -185,7 +204,6 @@
     <div class="scroll-to-top">
         <i class="fas fa-arrow-up"></i>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>

@@ -26,6 +26,113 @@ body {
     overflow-x: hidden;
 }
 
+/* أنماط أزرار التحكم */
+.control-buttons {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.control-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.control-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.lang-text {
+    position: absolute;
+    font-size: 0.7rem;
+    font-weight: bold;
+    bottom: 5px;
+}
+
+/* أنماط الوضع الليلي */
+body.dark-mode {
+    --light-color: #1a1a2e;
+    --dark-color: #f8f9fa;
+    --text-color: #e6e6e6;
+    background-color: #16213e;
+    color: var(--text-color);
+}
+
+body.dark-mode .service-card,
+body.dark-mode .project-card,
+body.dark-mode .contact-card,
+body.dark-mode .contact-form input,
+body.dark-mode .contact-form textarea {
+    background-color: #1a1a2e;
+    color: #e6e6e6;
+    border-color: #393e46;
+}
+
+body.dark-mode .service-card:hover,
+body.dark-mode .project-card:hover,
+body.dark-mode .contact-card:hover {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .contact-form input,
+body.dark-mode .contact-form textarea {
+    background-color: #1a1a2e;
+    color: #e6e6e6;
+}
+
+body.dark-mode .contact-form input:focus,
+body.dark-mode .contact-form textarea:focus {
+    box-shadow: 0 0 0 3px rgba(110, 87, 224, 0.3);
+}
+
+body.dark-mode .footer {
+    background: #0f3460;
+}
+
+/* تعديلات للوضع الإنجليزي */
+body[dir="ltr"] {
+    text-align: left;
+}
+
+body[dir="ltr"] .section-title::after {
+    left: 0;
+    transform: none;
+}
+
+body[dir="ltr"] .contact-content {
+    direction: ltr;
+}
+
+body[dir="ltr"] .contact-info {
+    text-align: left;
+}
+
+body[dir="ltr"] .contact-card {
+    flex-direction: row;
+}
+
+body[dir="ltr"] .services-grid,
+body[dir="ltr"] .projects-grid {
+    direction: ltr;
+}
+
 /* شريط التحميل */
 .loading-bar {
     position: fixed;
@@ -669,6 +776,18 @@ section {
     
     .contact-content {
         grid-template-columns: 1fr;
+    }
+    
+    .control-buttons {
+        top: 10px;
+        right: 10px;
+        flex-direction: row;
+    }
+    
+    .control-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
     }
 }
 
