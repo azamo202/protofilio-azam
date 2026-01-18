@@ -1,209 +1,523 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap">
-    <link rel="stylesheet" href="style.css">
-    <title>Azam Alsafani | Full Stack</title>
-    <link rel="icon" href="images/image.png" type="image/x-icon">
-</head>
-<body class="light-mode">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap"
+    />
+    <title>Azam Alsafani | Full Stack Developer</title>
+  </head>
+  <body>
     <!-- شريط التحميل -->
     <div class="loading-bar"></div>
 
-    <!-- أزرار التحكم (اللغة والوضع الليلي) -->
-    <div class="control-buttons">
-        <button id="language-toggle" class="control-btn" title="تبديل اللغة">
-            <i class="fa-solid fa-language"></i>
-            <span class="lang-text">EN</span>
-        </button>
-    </div>
+    <!-- الجسيمات المتحركة -->
+    <div class="particles" id="particles"></div>
 
     <!-- زر القائمة للموبايل -->
-    <div class="menu-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
 
-    <header>
-        <a href="#" class="logo">AZAM</a>
-        <nav class="navigation">
-            <a href="#home" class="nav-link" data-key="home">الرئيسية</a>
-            <a href="#services" class="nav-link" data-key="services">خدماتي</a>
-            <a href="#projects" class="nav-link" data-key="projects">مشاريعي</a>
-            <a href="#contact" class="nav-link" data-key="contact">اتصل بي</a>  
-        </nav>
+    <header id="header">
+      <a href="#" class="logo">AZAM</a>
+      <nav class="navigation" id="navigation">
+        <a href="#home" class="nav-link active">الرئيسية</a>
+        <a href="#services" class="nav-link">خدماتي</a>
+        <a href="#projects" class="nav-link">مشاريعي</a>
+        <a href="#testimonials" class="nav-link">آراء العملاء</a>
+        <a href="#contact" class="nav-link">اتصل بي</a>
+      </nav>
     </header>
-    
+
     <!-- القسم الرئيسي -->
     <section class="main" id="home">
-        <div class="overlay"></div>
-        <div class="content">
-            <h2 class="welcome-text" data-key="welcome">مرحباً، أنا <span class="name">عزام</span></h2>
-            <h1 class="job-title"><span class="typing-animation" data-key="jobTitle">Programer Full Stack</span></h1>
-            <p class="intro" data-key="intro">أقوم بتحويل أفكارك إلى مواقع ويب رائعة وتطبيقات مذهلة تلبي احتياجاتك وتفوق توقعاتك.</p>
-            <a href="#projects" class="main-button" data-key="viewWork">استعرض أعمالي</a>
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/in/azam-al-safani-77b0412a5/" target="_blank" class="social-link"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="#" target="_blank" class="social-link"><i class="fa-brands fa-facebook"></i></a>
-                <a href="http://wa.me/967781560010" target="_blank" class="social-link"><i class="fa-brands fa-whatsapp"></i></a>
-            </div>
+      <div class="content">
+        <h2 class="welcome-text">مرحباً، أنا <span class="name">عزام</span></h2>
+        <h1 class="job-title">
+          <span class="typing-animation">Full Stack Developer</span>
+        </h1>
+        <p class="intro">
+          أقوم بتحويل أفكارك إلى مواقع ويب رائعة وتطبيقات مذهلة تلبي احتياجاتك
+          وتفوق توقعاتك.
+        </p>
+        <a href="#projects" class="main-button">استعرض أعمالي</a>
+        <div class="social-icons">
+          <a
+            href="https://www.linkedin.com/in/azam-al-safani-77b0412a5/"
+            target="_blank"
+            class="social-link"
+            ><i class="fa-brands fa-linkedin-in"></i
+          ></a>
+          <a
+            href="https://www.facebook.com/profile.php?id=100003387995751"
+            target="_blank"
+            class="social-link"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+          <a
+            href="http://wa.me/967781560010"
+            target="_blank"
+            class="social-link"
+            ><i class="fa-brands fa-whatsapp"></i
+          ></a>
         </div>
-        <div class="scroll-indicator">
-            <span data-key="scroll">قم بالتمرير لأسفل</span>
-            <i class="fas fa-chevron-down"></i>
-        </div>
+      </div>
+      <div class="scroll-indicator">
+        <span>قم بالتمرير لأسفل</span>
+        <i class="fas fa-chevron-down"></i>
+      </div>
     </section>
 
     <!-- قسم الخدمات -->
     <section class="services" id="services">
-        <div class="container">
-            <h2 class="section-title" data-key="servicesTitle">خدماتي</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fa-solid fa-code"></i>
-                    </div>
-                    <h3 class="service-title" data-key="service1Title">تطوير المواقع</h3>
-                    <p class="service-description" data-key="service1Desc">أقوم بإنشاء مواقع ويب متجاوبة وسريعة باستخدام أحدث التقنيات لضمان تجربة مستخدم متميزة.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fa-solid fa-mobile-screen-button"></i>
-                    </div>
-                    <h3 class="service-title" data-key="service2Title">تطبيقات الجوال</h3>
-                    <p class="service-description" data-key="service2Desc">تصميم وتطوير تطبيقات جوال مبتكرة وسلسة تعمل على مختلف المنصات والأجهزة.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fa-solid fa-palette"></i>
-                    </div>
-                    <h3 class="service-title" data-key="service3Title">تصميم واجهات المستخدم</h3>
-                    <p class="service-description" data-key="service3Desc">تصميم واجهات مستخدم جذابة وسهلة الاستخدام تركز على تجربة المستخدم وتحقيق الأهداف.</p>
-                </div>
+      <div class="container">
+        <h2 class="section-title scroll-reveal">خدماتي</h2>
+        <div class="services-grid">
+          <div class="service-card scroll-reveal">
+            <div class="service-icon">
+              <i class="fa-solid fa-code"></i>
             </div>
+            <h3 class="service-title">تطوير المواقع</h3>
+            <p class="service-description">
+              أقوم بإنشاء مواقع ويب متجاوبة وسريعة باستخدام أحدث التقنيات لضمان
+              تجربة مستخدم متميزة.
+            </p>
+          </div>
+          <div class="service-card scroll-reveal">
+            <div class="service-icon">
+              <i class="fa-solid fa-mobile-screen-button"></i>
+            </div>
+            <h3 class="service-title">تطبيقات الجوال</h3>
+            <p class="service-description">
+              تصميم وتطوير تطبيقات جوال مبتكرة وسلسة تعمل على مختلف المنصات
+              والأجهزة.
+            </p>
+          </div>
+          <div class="service-card scroll-reveal">
+            <div class="service-icon">
+              <i class="fa-solid fa-palette"></i>
+            </div>
+            <h3 class="service-title">تصميم واجهات المستخدم</h3>
+            <p class="service-description">
+              تصميم واجهات مستخدم جذابة وسهلة الاستخدام تركز على تجربة المستخدم
+              وتحقيق الأهداف.
+            </p>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- قسم المشاريع -->
     <section class="projects" id="projects">
-        <div class="container">
-            <h2 class="section-title" data-key="projectsTitle">مشاريعي</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/Screenshot 2025-08-24 113804.png" alt="متجر إلكتروني"/>
-                        <div class="project-overlay">
-                            <a href="https://alnagom.onrender.com" target="_blank" class="project-link" data-key="viewProject">عرض المشروع</a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3 class="project-title">متجر الكتروني لمحلات النجوم</h3>
-                        <p class="project-category">تصميم ويب يتيح للمستخدم الحجز والشراء عن طريق الموقع</p>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/Screenshot 2025-08-24 113143.png" alt="تطبيق بصمة تواجد"/>
-                        <div class="project-overlay">
-                            <a href="Pdf/تطبيق بصمة تواجد.pdf" target="_blank" class="project-link" data-key="viewProject">عرض المشروع</a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3 class="project-title">تطبيق بصمة تواجد</h3>
-                        <p class="project-category">تطبيق للتحضير عن طريق الموقع الجغرافي والبصمة عن طريق الهاتف</p>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/Screenshot 2025-08-24 113609.png" alt="لوحة تحكم المتجر"/>
-                        <div class="project-overlay">
-                            <a href="https://alnagom.onrender.com/admin" target="_blank" class="project-link" data-key="viewProject">عرض المشروع</a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3 class="project-title">لوحة تحكم خاصه للمتجر الالكتروني</h3>
-                        <p class="project-category">داش بوورد لإضافة المنتجات والطلبات والرؤية العامة للمتجر</p>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/Screenshot 2025-08-24 113333.png" alt="لوحة تحكم التطبيق"/>
-                        <div class="project-overlay">
-                            <a href="files/project.pdf" target="_blank" class="project-link" data-key="viewProject">عرض المشروع</a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3 class="project-title">لوحة تحكم لتطبيق بصمة تواجد</h3>
-                        <p class="project-category">داش بوورد لادارة تطبيق الحضور والانصراف</p>
-                    </div>
-                </div>
+      <div class="container">
+        <h2 class="section-title scroll-reveal">مشاريعي</h2>
+        <div class="projects-grid">
+          <div class="project-card scroll-reveal">
+            <div class="project-image">
+              <img
+                src="images/Screenshot 2025-08-24 113804.png"
+                alt="متجر إلكتروني"
+              />
+              <div class="project-overlay">
+                <a
+                  href="https://youtu.be/ESqF6-whSvk?si=b_RQwSxT7EJiGPZx"
+                  target="_blank"
+                  class="project-link"
+                  >عرض المشروع</a
+                >
+              </div>
             </div>
+            <div class="project-info">
+              <h3 class="project-title">متجر الكتروني لمحلات النجوم</h3>
+              <p class="project-category">
+                تصميم ويب يتيح للمستخدم الحجز والشراء عن طريق الموقع
+              </p>
+            </div>
+          </div>
+          <div class="project-card scroll-reveal">
+            <div class="project-image">
+              <img
+                src="images/Screenshot 2025-09-22 113956.png"
+                alt="موقع تفاعلي"
+              />
+              <div class="project-overlay">
+                <a
+                  href="https://youtu.be/a7oPoHzNDq8?si=sIajWYUuMiAaYHaZ"
+                  target="_blank"
+                  class="project-link"
+                  >عرض المشروع</a
+                >
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">موقع تفاعلي لمحلات شهد البساتين</h3>
+              <p class="project-category">
+                موقع بتصميم جذاب وتصميم عصري وبتجربة مستخدم بسيطة جدا وسلسة
+              </p>
+            </div>
+          </div>
+          <div class="project-card scroll-reveal">
+            <div class="project-image">
+              <img
+                src="images/Screenshot 2025-08-24 113143.png"
+                alt="تطبيق بصمة تواجد"
+              />
+              <div class="project-overlay">
+                <a
+                  href="Pdf/تطبيق بصمة تواجد.pdf"
+                  target="_blank"
+                  class="project-link"
+                  >عرض المشروع</a
+                >
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">تطبيق بصمة تواجد</h3>
+              <p class="project-category">
+                تطبيق للتحضير عن طريق الموقع الجغرافي والبصمة عن طريق الهاتف
+              </p>
+            </div>
+          </div>
+          <div class="project-card scroll-reveal">
+            <div class="project-image">
+              <img
+                src="images/Screenshot 2025-08-24 113609.png"
+                alt="لوحة تحكم المتجر"
+              />
+              <div class="project-overlay">
+                <a
+                  href="https://youtu.be/dKalddQyrL0?si=luThYOZfZlUXWuVp"
+                  target="_blank"
+                  class="project-link"
+                  >عرض المشروع</a
+                >
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">لوحة تحكم خاصه للمتجر الالكتروني</h3>
+              <p class="project-category">
+                داش بورد لإضافة المنتجات والطلبات والرؤية العامة للمتجر
+              </p>
+            </div>
+          </div>
+          <div class="project-card scroll-reveal">
+            <div class="project-image">
+              <img
+                src="images/Screenshot 2025-08-24 113333.png"
+                alt="لوحة تحكم التطبيق"
+              />
+              <div class="project-overlay">
+                <a
+                  href="https://youtu.be/MlfjU7ssoic?si=I6QwZM-ECKQ2J-5P"
+                  target="_blank"
+                  class="project-link"
+                  >عرض المشروع</a
+                >
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">لوحة تحكم لتطبيق بصمة تواجد</h3>
+              <p class="project-category">
+                داش بورد لإدارة تطبيق الحضور والانصراف
+              </p>
+            </div>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <!-- قسم آراء العملاء -->
+    <section class="testimonials" id="testimonials">
+      <div class="testimonials-container">
+        <h2 class="section-title scroll-reveal">آراء العملاء</h2>
+        <div class="testimonials-wrapper">
+          <a
+            href="https://mostaql.com/u/azamosafani/reviews/8728155"
+            target="_blank"
+            class="testimonial-card scroll-reveal"
+            style="text-decoration: none; color: inherit"
+          >
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">A</div>
+              <div class="testimonial-info">
+                <h4>Aisha M.</h4>
+                <div class="testimonial-platform">
+                  <span class="platform-badge">
+                    <i class="fas fa-briefcase"></i>
+                    مستقل
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-rating">
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+            </div>
+            <p class="testimonial-text">
+              حرص على اتقان العمل - صبر على التعديلات وإن طالت - تعامل راقي
+            </p>
+            <div class="testimonial-date">
+              <i class="far fa-clock"></i> منذ 8 أشهر و 18 يوما
+            </div>
+          </a>
+
+          <a
+            href="https://mostaql.com/u/azamosafani/reviews/8807840"
+            target="_blank"
+            class="testimonial-card scroll-reveal"
+            style="text-decoration: none; color: inherit"
+          >
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">م</div>
+              <div class="testimonial-info">
+                <h4>محمد ع.</h4>
+                <div class="testimonial-platform">
+                  <span class="platform-badge">
+                    <i class="fas fa-briefcase"></i>
+                    مستقل
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-rating">
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+            </div>
+            <p class="testimonial-text">
+              الاستاذ عزام انا فعلا سعيد بالتعامل معاك مثالا للاحترافية
+              والانضباط بالعمل وكان لى كل الشرف بالتعامل معك واكيد باذن الله
+              سيكون هناك تعاملات اخرى
+            </p>
+            <div class="testimonial-date">
+              <i class="far fa-clock"></i> منذ 7 أشهر و 10 أيام
+            </div>
+          </a>
+
+          <a
+            href="https://mostaql.com/u/azamosafani/reviews/9215303"
+            target="_blank"
+            class="testimonial-card scroll-reveal"
+            style="text-decoration: none; color: inherit"
+          >
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">M</div>
+              <div class="testimonial-info">
+                <h4>Mshari A.</h4>
+                <div class="testimonial-platform">
+                  <span class="platform-badge">
+                    <i class="fas fa-briefcase"></i>
+                    مستقل
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-rating">
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+            </div>
+            <p class="testimonial-text">
+              ماشاء الله تبارك الله شكر وتقدير للمهندس عزام .. رجل بمعنى الكلمة
+              واحترافية في الاداء انصح بالتعامل معه وبقوة
+            </p>
+            <div class="testimonial-date">
+              <i class="far fa-clock"></i> منذ شهرين و 6 أيام
+            </div>
+          </a>
+
+          <a
+            href="https://mostaql.com/u/azamosafani/reviews/9381946"
+            target="_blank"
+            class="testimonial-card scroll-reveal"
+            style="text-decoration: none; color: inherit"
+          >
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">M</div>
+              <div class="testimonial-info">
+                <h4>Mshari A.</h4>
+                <div class="testimonial-platform">
+                  <span class="platform-badge">
+                    <i class="fas fa-briefcase"></i>
+                    مستقل
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-rating">
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+            </div>
+            <p class="testimonial-text">
+              وفقك الله سعادة المهندس وشاااكر ومقدر تعاونك واهتمامك
+            </p>
+            <div class="testimonial-date">
+              <i class="far fa-clock"></i> منذ شهر و 12 أيام
+            </div>
+          </a>
+
+          <a
+            href="https://mostaql.com/u/azamosafani/reviews/9489146"
+            target="_blank"
+            class="testimonial-card scroll-reveal"
+            style="text-decoration: none; color: inherit"
+          >
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">M</div>
+              <div class="testimonial-info">
+                <h4>Mshari A.</h4>
+                <div class="testimonial-platform">
+                  <span class="platform-badge">
+                    <i class="fas fa-briefcase"></i>
+                    مستقل
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-rating">
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+            </div>
+            <p class="testimonial-text">
+              ماشاء الله تبارك الله .... من افضل المبرمجين فعلا وفقك الله مهندس
+              عزام
+            </p>
+            <div class="testimonial-date">
+              <i class="far fa-clock"></i>  منذ 13 يوما و 15 ساعة
+            </div>
+          </a>
+          
+          
+           <a
+            href="https://khamsat.com/user/azamo2030/reviews/1107544"
+            target="_blank"
+            class="testimonial-card scroll-reveal"
+            style="text-decoration: none; color: inherit"
+          >
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">N</div>
+              <div class="testimonial-info">
+                <h4>.Nnnnnn N</h4>
+                <div class="testimonial-platform">
+                  <span class="platform-badge">
+                    <i class="fas fa-briefcase"></i>
+                    خمسات
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-rating">
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+            </div>
+            <p class="testimonial-text">ماشاءالله فنان</p>
+            <div class="testimonial-date">
+              <i class="far fa-clock"></i>منذ شهر و14 يوم
+            </div>
+           </a>
+          </div>
     </section>
 
     <!-- قسم الاتصال -->
     <section class="contact" id="contact">
-        <div class="container">
-            <h2 class="section-title" data-key="contactTitle">اتصل بي</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-card">
-                        <div class="contact-icon">
-                            <i class="fa-solid fa-phone"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3 data-key="phone">هاتف</h3>
-                            <p>+967 781560010</p>
-                        </div>
-                    </div>
-                    <div class="contact-card">
-                        <div class="contact-icon">
-                            <i class="fa-regular fa-envelope"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3 data-key="email">بريد إلكتروني</h3>
-                            <p>azoz20113040@gmail.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-card">
-                        <div class="contact-icon">
-                            <i class="fa-solid fa-location-dot"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3 data-key="location">موقعي</h3>
-                            <p>اليمن</p>
-                        </div>
-                    </div>
-                </div>
-                <form class="contact-form">
-                    <input type="text" placeholder="اسمك" required data-key="namePlaceholder">
-                    <input type="email" placeholder="بريدك الإلكتروني" required data-key="emailPlaceholder">
-                    <textarea placeholder="رسالتك" rows="5" required data-key="messagePlaceholder"></textarea>
-                    <button type="submit" data-key="sendMessage">إرسال الرسالة</button>
-                </form>
+      <div class="container">
+        <h2 class="section-title scroll-reveal">اتصل بي</h2>
+        <div class="contact-content">
+          <div class="contact-info">
+            <div class="contact-card scroll-reveal">
+              <div class="contact-icon">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div class="contact-details">
+                <h3>هاتف</h3>
+                <p>+967 781560010</p>
+              </div>
             </div>
+            <div class="contact-card scroll-reveal">
+              <div class="contact-icon">
+                <i class="fa-regular fa-envelope"></i>
+              </div>
+              <div class="contact-details">
+                <h3>بريد إلكتروني</h3>
+                <p>azoz20113040@gmail.com</p>
+              </div>
+            </div>
+            <div class="contact-card scroll-reveal">
+              <div class="contact-icon">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div class="contact-details">
+                <h3>موقعي</h3>
+                <p>اليمن</p>
+              </div>
+            </div>
+          </div>
+
+      <form class="contact-form scroll-reveal" action="https://formspree.io/f/mdaaedgb" method="POST"> <label> اسمك: <input type="text" name="name" required> </label> <label> بريدك الإلكتروني: <input type="email" name="_replyto" required> </label> <label> رسالتك: <textarea name="message" rows="5" required></textarea> </label> <button type="submit">إرسال الرسالة</button> </form>
+
         </div>
+      </div>
     </section>
 
     <footer class="footer">
-        <div class="container">
-            <p class="footer-text">&copy; 2025 <span data-key="rights">جميع الحقوق محفوظة</span> <span>عزام الصفاني</span></p>
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/in/azam-al-safani-77b0412a5/" target="_blank" class="social-link"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="http://wa.me/967781560010" target="_blank" class="social-link"><i class="fa-brands fa-whatsapp"></i></a>
-                <a href="https://www.facebook.com/profile.php?id=100003387995751" target="_blank" class="social-link"><i class="fa-brands fa-facebook"></i></a>
-            </div>  
+      <div class="container">
+        <p class="footer-text">
+          &copy; 2026 <span>جميع الحقوق محفوظة</span>
+          <span>عزام الصعفاني</span>
+        </p>
+        <div class="social-icons">
+          <a
+            href="https://www.linkedin.com/in/azam-al-safani-77b0412a5/"
+            target="_blank"
+            class="social-link"
+            ><i class="fa-brands fa-linkedin-in"></i
+          ></a>
+          <a
+            href="http://wa.me/967781560010"
+            target="_blank"
+            class="social-link"
+            ><i class="fa-brands fa-whatsapp"></i
+          ></a>
+          <a
+            href="https://www.facebook.com/profile.php?id=100003387995751"
+            target="_blank"
+            class="social-link"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
         </div>
+      </div>
     </footer>
 
     <!-- زر العودة للأعلى -->
-    <div class="scroll-to-top">
-        <i class="fas fa-arrow-up"></i>
+    <div class="scroll-to-top" id="scrollToTop">
+      <i class="fas fa-arrow-up"></i>
     </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
