@@ -2,6 +2,14 @@
   "projects": {
     "default": "azamalsafani-4c844"
   },
-  "targets": {},
+  "targets": {
+    "azamalsafani-4c844": {
+      "hosting": {
+        "main": [
+          "azamalsafani-4c844"
+        ]
+      }
+    }
+  },
   "etags": {}
 }
