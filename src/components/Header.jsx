@@ -40,18 +40,8 @@ function Header() {
 
   return (
     <>
-      <div 
-        className={`menu-toggle ${isMenuOpen ? 'active' : ''}`} 
-        id="menu-toggle"
-        onClick={() => setIsMenuOpen(!isMenuOpen)}
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-
-      <header id="header" className={isScrolled ? 'scrolled' : ''}>
-        <a href="#" className="logo" onClick={(e) => handleLinkClick(e, '#home')}>AZAM</a>
+      <header id="header" className={isScrolled ? 'scrolled glass' : 'glass'}>
+        <a href="#" className="logo text-gradient en-text" onClick={(e) => handleLinkClick(e, '#home')}>AZAM</a>
         <nav className={`navigation ${isMenuOpen ? 'active' : ''}`} id="navigation">
           {[
             { href: '#home', text: 'الرئيسية' },
@@ -70,6 +60,15 @@ function Header() {
             </a>
           ))}
         </nav>
+        <div 
+          className={`menu-toggle ${isMenuOpen ? 'active' : ''}`} 
+          id="menu-toggle"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </header>
     </>
   );

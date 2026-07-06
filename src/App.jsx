@@ -60,7 +60,7 @@ function App() {
       </main>
       <Footer />
       <div 
-        className={`scroll-to-top ${showScrollToTop ? 'visible' : ''}`} 
+        className={`scroll-top-btn ${showScrollToTop ? 'visible' : ''}`} 
         id="scrollToTop" 
         onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}
       >

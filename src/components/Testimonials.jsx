@@ -74,40 +74,62 @@ function Testimonials() {
     }
   ];
 
+  const glowColors = ['glow-blue', 'glow-purple', 'glow-emerald', 'glow-pink', 'glow-yellow', 'glow-cyan', 'glow-blue'];
+
   return (
     <section className="testimonials" id="testimonials">
-      <div className="testimonials-container">
-        <h2 className="section-title scroll-reveal">آراء العملاء</h2>
-        <div className="testimonials-wrapper">
+      <div className="container">
+        <div className="testimonials-header-wrapper scroll-reveal">
+          <h2 className="section-title">آراء العملاء</h2>
+          <p className="section-subtitle">كلمات نعتز بها من شركاء النجاح</p>
+        </div>
+        
+        <div className="testimonials-masonry">
           {testimonials.map((test, index) => (
             <a
               key={index}
               href={test.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="testimonial-card scroll-reveal"
-              style={{ textDecoration: 'none', color: 'inherit' }}
+              className={`testimonial-card scroll-reveal ${glowColors[index % glowColors.length]} ${index === 0 || index === 3 ? 'card-large' : ''}`}
+              style={{ textDecoration: 'none', color: 'inherit', animationDelay: `${index * 0.1}s` }}
             >
+              <div className="quote-mark-bg">
+                <i className="fas fa-quote-right"></i>
+              </div>
+              
               <div className="testimonial-header">
-                <div className="testimonial-avatar">{test.avatar}</div>
-                <div className="testimonial-info">
-                  <h4>{test.name}</h4>
-                  <div className="testimonial-platform">
+                <div className="testimonial-avatar">
+                  {test.avatar}
+                </div>
+                <div className="testimonial-author">
+                  <h4 className="author-name">{test.name}</h4>
+                  <div className="testimonial-role">
                     <span className="platform-badge">
                       <i className={test.icon}></i>
-                      {' '}{test.platform}
+                      {test.platform}
                     </span>
                   </div>
                 </div>
+                <div className="testimonial-stars">
+                  {[...Array(test.rating)].map((_, i) => (
+                    <i key={i} className="fas fa-star star"></i>
+                  ))}
+                </div>
               </div>
-              <div className="testimonial-rating">
-                {[...Array(test.rating)].map((_, i) => (
-                  <i key={i} className="fas fa-star star"></i>
-                ))}
+              
+              <div className="testimonial-body">
+                <p className="testimonial-text">{test.text}</p>
               </div>
-              <p className="testimonial-text">{test.text}</p>
-              <div className="testimonial-date">
-                <i className="far fa-clock"></i> {test.date}
+              
+              <div className="testimonial-footer">
+                <div className="testimonial-date">
+                  <i className="far fa-clock"></i> {test.date}
+                </div>
+                <div className="view-project-btn">
+                  <span>عرض التقييم</span>
+                  <i className="fas fa-arrow-left"></i>
+                </div>
               </div>
             </a>
           ))}
