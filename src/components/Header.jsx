@@ -47,6 +47,7 @@ function Header() {
             { href: '#home', text: 'الرئيسية' },
             { href: '#services', text: 'خدماتي' },
             { href: '#projects', text: 'مشاريعي' },
+            { href: '#certificates', text: 'شهاداتي' },
             { href: '#testimonials', text: 'آراء العملاء' },
             { href: '#contact', text: 'اتصل بي' }
           ].map(link => (
